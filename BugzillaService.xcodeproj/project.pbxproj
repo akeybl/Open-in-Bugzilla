@@ -10,6 +10,10 @@
 		5B02AF091431362200FF0C8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B02AF081431362200FF0C8A /* Foundation.framework */; };
 		5B02AF0C1431362200FF0C8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B02AF0B1431362200FF0C8A /* main.m */; };
 		5B02AF101431362200FF0C8A /* BugzillaService.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5B02AF0F1431362200FF0C8A /* BugzillaService.1 */; };
+		5B02AF181431372000FF0C8A /* BugParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B02AF171431372000FF0C8A /* BugParser.m */; };
+		5B02AF1A1431396600FF0C8A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B02AF191431396600FF0C8A /* Cocoa.framework */; };
+		5B02AF2114313CBC00FF0C8A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B02AF2014313CBC00FF0C8A /* CoreFoundation.framework */; };
+		5B02AF2714313CBC00FF0C8A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B02AF2514313CBC00FF0C8A /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +33,16 @@
 		5B02AF041431362200FF0C8A /* BugzillaService */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BugzillaService; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B02AF081431362200FF0C8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B02AF0B1431362200FF0C8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5B02AF0E1431362200FF0C8A /* BugzillaService-Prefix.pch */ = {isa = PBXFileReference; path = "BugzillaService-Prefix.pch"; sourceTree = "<group>"; };
+		5B02AF0E1431362200FF0C8A /* BugzillaService-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BugzillaService-Prefix.pch"; sourceTree = "<group>"; };
 		5B02AF0F1431362200FF0C8A /* BugzillaService.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BugzillaService.1; sourceTree = "<group>"; };
+		5B02AF161431372000FF0C8A /* BugParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugParser.h; sourceTree = "<group>"; };
+		5B02AF171431372000FF0C8A /* BugParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugParser.m; sourceTree = "<group>"; };
+		5B02AF191431396600FF0C8A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5B02AF1F14313CBC00FF0C8A /* BugParser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugParser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B02AF2014313CBC00FF0C8A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		5B02AF2414313CBC00FF0C8A /* BugParser-Info.plist */ = {isa = PBXFileReference; path = "BugParser-Info.plist"; sourceTree = "<group>"; };
+		5B02AF2614313CBC00FF0C8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B02AF2814313CBC00FF0C8A /* BugParser-Prefix.pch */ = {isa = PBXFileReference; path = "BugParser-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B02AF091431362200FF0C8A /* Foundation.framework in Frameworks */,
+				5B02AF1A1431396600FF0C8A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B02AF1C14313CBC00FF0C8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B02AF2114313CBC00FF0C8A /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				5B02AF0A1431362200FF0C8A /* BugzillaService */,
+				5B02AF2214313CBC00FF0C8A /* BugParser */,
 				5B02AF071431362200FF0C8A /* Frameworks */,
 				5B02AF051431362200FF0C8A /* Products */,
 			);
@@ -58,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5B02AF041431362200FF0C8A /* BugzillaService */,
+				5B02AF1F14313CBC00FF0C8A /* BugParser.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,7 +88,9 @@
 		5B02AF071431362200FF0C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B02AF191431396600FF0C8A /* Cocoa.framework */,
 				5B02AF081431362200FF0C8A /* Foundation.framework */,
+				5B02AF2014313CBC00FF0C8A /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				5B02AF0B1431362200FF0C8A /* main.m */,
+				5B02AF161431372000FF0C8A /* BugParser.h */,
+				5B02AF171431372000FF0C8A /* BugParser.m */,
 				5B02AF0F1431362200FF0C8A /* BugzillaService.1 */,
 				5B02AF0D1431362200FF0C8A /* Supporting Files */,
 			);
@@ -84,6 +111,24 @@
 			isa = PBXGroup;
 			children = (
 				5B02AF0E1431362200FF0C8A /* BugzillaService-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B02AF2214313CBC00FF0C8A /* BugParser */ = {
+			isa = PBXGroup;
+			children = (
+				5B02AF2314313CBC00FF0C8A /* Supporting Files */,
+			);
+			path = BugParser;
+			sourceTree = "<group>";
+		};
+		5B02AF2314313CBC00FF0C8A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B02AF2414313CBC00FF0C8A /* BugParser-Info.plist */,
+				5B02AF2514313CBC00FF0C8A /* InfoPlist.strings */,
+				5B02AF2814313CBC00FF0C8A /* BugParser-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +153,23 @@
 			productReference = 5B02AF041431362200FF0C8A /* BugzillaService */;
 			productType = "com.apple.product-type.tool";
 		};
+		5B02AF1E14313CBC00FF0C8A /* BugParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B02AF2914313CBC00FF0C8A /* Build configuration list for PBXNativeTarget "BugParser" */;
+			buildPhases = (
+				5B02AF1B14313CBC00FF0C8A /* Sources */,
+				5B02AF1C14313CBC00FF0C8A /* Frameworks */,
+				5B02AF1D14313CBC00FF0C8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BugParser;
+			productName = BugParser;
+			productReference = 5B02AF1F14313CBC00FF0C8A /* BugParser.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,9 +188,21 @@
 			projectRoot = "";
 			targets = (
 				5B02AF031431362200FF0C8A /* BugzillaService */,
+				5B02AF1E14313CBC00FF0C8A /* BugParser */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B02AF1D14313CBC00FF0C8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B02AF2714313CBC00FF0C8A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B02AF001431362200FF0C8A /* Sources */ = {
@@ -136,10 +210,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B02AF0C1431362200FF0C8A /* main.m in Sources */,
+				5B02AF181431372000FF0C8A /* BugParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B02AF1B14313CBC00FF0C8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5B02AF2514313CBC00FF0C8A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B02AF2614313CBC00FF0C8A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5B02AF111431362200FF0C8A /* Debug */ = {
@@ -205,6 +298,30 @@
 			};
 			name = Release;
 		};
+		5B02AF2A14313CBC00FF0C8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BugParser/BugParser-Prefix.pch";
+				INFOPLIST_FILE = "BugParser/BugParser-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5B02AF2B14313CBC00FF0C8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BugParser/BugParser-Prefix.pch";
+				INFOPLIST_FILE = "BugParser/BugParser-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -222,6 +339,14 @@
 			buildConfigurations = (
 				5B02AF141431362200FF0C8A /* Debug */,
 				5B02AF151431362200FF0C8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B02AF2914313CBC00FF0C8A /* Build configuration list for PBXNativeTarget "BugParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B02AF2A14313CBC00FF0C8A /* Debug */,
+				5B02AF2B14313CBC00FF0C8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

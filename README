@@ -1,0 +1,21 @@
+About ===
+Copy/paste appears to be the method of choice for viewing specific bug numbers in bugzilla, so I've thrown together a small OS X service that allows you to select bug #s in text and use a keyboard shortcut to open (1 bug) or list them (n bugs) on bugzilla.mozilla.org. Note that bug #s <100, 1990-2020, and >100000000 are not considered bugs.
+
+Compatibility ===
+Mac OS X 10.5 or later (only 10.7 tested)
+
+History ===
+v0.1 - Initial commit
+
+How to Install ===
+1) Open Finder
+2) Shift+cmd+g to ~/Library/
+3) Go to Services (create the folder if necessary)
+4) Unzip "BugParser.zip" into that folder (you should now see BugParser.service in that directory)
+5) Log-out and back in or run the following at the commandline:
+    /System/Library/CoreServices/pbs
+
+6) Go to System Preferences, the Keyboard Pane, Services and find "Open in Bugzilla"
+7) Click the checkbox to enable the service, and double-click to the right of the label to set a keyboard shortcut
+8) Now select some text and hit your keyboard shortcut to launch Bugzilla in the default web browser.
+
